@@ -1,5 +1,5 @@
 <?php
-namespace SilexSkeleton\Entity;
+namespace Start\Entity;
 
 /**
  * Represents a basic message

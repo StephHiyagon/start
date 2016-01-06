@@ -23,8 +23,8 @@ $app->register(new Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider
         "mappings" => array(
             array(
                 'type' => 'annotation',
-                'namespace' => 'SilexSkeleton\Entity',
-                'path' => __DIR__ . "/src/SilexSkeleton/Entity"
+                'namespace' => 'Start\Entity',
+                'path' => __DIR__ . "/src/Start/Entity"
             )
         )
     )
@@ -73,15 +73,15 @@ $app['twig']->addExtension(new Symfony\Bridge\Twig\Extension\TranslationExtensio
 
 /* Dependency Injection wiring */
 $app['service.messages'] = $app->share(function() use ($app){
-	return new SilexSkeleton\Service\Impl\MessageServiceImpl($app['orm.em']);
+	return new Start\Service\Impl\MessageServiceImpl($app['orm.em']);
 });
 
 $app['controllers.helloworld'] = $app->share(function() use ($app){
-	return new SilexSkeleton\Controller\HelloWorldController($app['twig']);
+	return new Start\Controller\HelloWorldController($app['twig']);
 });
 
 $app['controllers.messages'] = $app->share(function() use ($app){
-	return new SilexSkeleton\Controller\MessageController($app['service.messages']);
+	return new Start\Controller\MessageController($app['service.messages']);
 });
 
 return $app;

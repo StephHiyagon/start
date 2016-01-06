@@ -1,5 +1,5 @@
 <?php
-namespace SilexSkeleton\Exception;
+namespace Start\Exception;
 
 /**
  * Thrown, when a database entry was not found.

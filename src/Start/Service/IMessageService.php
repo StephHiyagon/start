@@ -1,8 +1,8 @@
 <?php
-namespace SilexSkeleton\Service;
+namespace Start\Service;
 
-use SilexSkeleton\Entity\Message;
-use SilexSkeleton\Exception\EntityNotFoundException;
+use Start\Entity\Message;
+use Start\Exception\EntityNotFoundException;
 /**
  * Interface for a basic message service
  * @author Lennart Rosam - <hello@takuto.de>

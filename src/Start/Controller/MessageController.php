@@ -1,10 +1,10 @@
 <?php
-namespace SilexSkeleton\Controller;
+namespace Start\Controller;
 
-use SilexSkeleton\Service\IMessageService;
+use Start\Service\IMessageService;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use SilexSkeleton\Exception\EntityNotFoundException;
-use SilexSkeleton\Entity\Message;
+use Start\Exception\EntityNotFoundException;
+use Start\Entity\Message;
 use Symfony\Component\HttpFoundation\Request;
 class MessageController {
 	

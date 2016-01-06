@@ -1,10 +1,10 @@
 <?php
-namespace SilexSkeleton\Service\Impl;
+namespace Start\Service\Impl;
 
-use SilexSkeleton\Service\IMessageService;
+use Start\Service\IMessageService;
 use Doctrine\ORM\EntityManager;
-use SilexSkeleton\Entity\Message;
-use SilexSkeleton\Exception\EntityNotFoundException;
+use Start\Entity\Message;
+use Start\Exception\EntityNotFoundException;
 
 class MessageServiceImpl implements IMessageService {
 	
@@ -12,13 +12,13 @@ class MessageServiceImpl implements IMessageService {
 	private $entityManager;
 	
 	public function __construct(EntityManager $em) {
-		$this->messageRepository = $em->getRepository("SilexSkeleton\Entity\Message");
+		$this->messageRepository = $em->getRepository("Start\Entity\Message");
 		$this->entityManager = $em;
 	}
 	
 	/**
 	 * {@inheritDoc}
-	 * @see \SilexSkeleton\Service\IMessageService::getAllMessages()
+	 * @see \Start\Service\IMessageService::getAllMessages()
 	 */
 	public function getAllMessages() {
 		return $this->messageRepository->findAll();
@@ -26,7 +26,7 @@ class MessageServiceImpl implements IMessageService {
 
 	/**
 	 * {@inheritDoc}
-	 * @see \SilexSkeleton\Service\IMessageService::getMessageById()
+	 * @see \Start\Service\IMessageService::getMessageById()
 	 */
 	public function getMessageById($id) {
 		return $this->messageRepository->find($id);
@@ -34,7 +34,7 @@ class MessageServiceImpl implements IMessageService {
 
 	/**
 	 * {@inheritDoc}
-	 * @see \SilexSkeleton\Service\IMessageService::createMessage()
+	 * @see \Start\Service\IMessageService::createMessage()
 	 */
 	public function createMessage($message = "") {
 		$entity = new Message();
@@ -47,7 +47,7 @@ class MessageServiceImpl implements IMessageService {
 
 	/**
 	 * {@inheritDoc}
-	 * @see \SilexSkeleton\Service\IMessageService::updateMessage()
+	 * @see \Start\Service\IMessageService::updateMessage()
 	 */
 	public function updateMessage($id, $string = "") {
 		$message = $this->getMessageById($id);
@@ -63,7 +63,7 @@ class MessageServiceImpl implements IMessageService {
 
 	/**
 	 * {@inheritDoc}
-	 * @see \SilexSkeleton\Service\IMessageService::deleteMessageById()
+	 * @see \Start\Service\IMessageService::deleteMessageById()
 	 */
 	public function deleteMessageById($id) {
 		$queryBuilder = $this->messageRepository->createQueryBuilder("msg")->delete()->where("msg.id = :id");
@@ -78,7 +78,7 @@ class MessageServiceImpl implements IMessageService {
 
 	/**
 	 * {@inheritDoc}
-	 * @see \SilexSkeleton\Service\IMessageService::createExampleMessages()
+	 * @see \Start\Service\IMessageService::createExampleMessages()
 	 */
 	public function createExampleMessages() {
 		$count = $this->messageRepository->createQueryBuilder("msg")

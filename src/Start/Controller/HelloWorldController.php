@@ -1,5 +1,5 @@
 <?php
-namespace SilexSkeleton\Controller;
+namespace Start\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 
