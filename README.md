@@ -5,10 +5,6 @@ is comfortable sharing what they are up to with a commercial service.
  
 This project aims at allowing users to be in control and host their own service.
 
-## License
-
-This project is licensed under the GNU Affero general 
-
 ## Getting started
 
 As for now, this project is under development. It is **not yet intendet for end users**. 
@@ -79,3 +75,26 @@ As you can see, PDO is used. The app should work with any relational database th
 `php vendor/bin/doctrine orm:schema-tool:create` in order to create the DB.
 
 Navigate to "http://start.dev" (replace with the name of your VHost) and see what happens.
+
+## License
+
+This project is licensed under the GNU Affero General Public License Version 3.
+
+**A non legal binding breakdown of this license:**
+
+- You can view and edit the source of this software.
+
+- Feel free to make unlimited copies of the software and distribute them as you please.
+
+- You may do this free of charge or charge people. Commercial distribution is allowed too.
+
+- You are required to grant the same rights to everybody you give this software to. This means
+  everybody whom you are giving the software to may also get the source and the software must be licensed
+  under AGPL V3. They too may make modifications and redistribute the software themselves.
+  
+- If you are hosting this software for somebody, you are required to grant them access to the source
+  including any modifications you may have made. Likewise as a user, you are entiteled to get access to the source
+  code and you are allowed to modify and redistribute it. The license must also be AGPL V3.
+  
+- This also applies for any derivative software products that are based on this software. Including any plugins
+  or other extensions / modifications.
